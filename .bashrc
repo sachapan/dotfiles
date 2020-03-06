@@ -134,4 +134,3 @@ alias patches="sudo apt-get update;sudo apt-get -y upgrade"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 export EDITOR=vim
-#export HUBOT_SLACK_TOKEN=xoxb-36410885010-mmpaQHPXwYA3kV05Bfm742Hp
