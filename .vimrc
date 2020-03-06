@@ -12,6 +12,7 @@ set laststatus=2
 set autowrite
 set modelines=0
 set nomodeline
+set vb noerrorbells
 
 call pathogen#infect()
 "syntax on
