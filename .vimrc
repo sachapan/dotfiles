@@ -1,10 +1,10 @@
 set nocompatible
 set nocp
 set backspace=2
-set nobackup
-set nowritebackup
-set noswapfile
-set history=50
+"set nobackup
+"set nowritebackup
+"set noswapfile
+set history=5000
 set ruler
 set number
 set showcmd
@@ -14,6 +14,7 @@ set autowrite
 set modelines=0
 set nomodeline
 set vb noerrorbells
+
 
 call pathogen#infect()
 "syntax on
@@ -34,4 +35,9 @@ set autoindent    " align the new line indent with the previous line
 
 autocmd BufNewFile,BufRead *.py set ft=python
 autocmd BufWritePost *.py call Flake8()
+
+"=====[ Comments are important ]==================
+
+highlight Comment term=bold cterm=italic ctermfg=white gui=italic guifg=white
+
 
