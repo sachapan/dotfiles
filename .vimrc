@@ -17,7 +17,9 @@ set vb noerrorbells
 
 
 call pathogen#infect()
-"syntax on
+
+colo evening
+syntax on
 syntax enable
 filetype plugin on
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
