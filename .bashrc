@@ -121,6 +121,13 @@ case $TERM in
 esac
 PS1="${SCREENTITLE}${PS1}"
 
+# Sacha add sourcing aliases from .aliases file
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+set -o vi
+export EDITOR=vim
 
 alias pbx='ssh root@incrediblepbx'
 #alias sabadd='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py /mnt/Multimedia/temp'
@@ -128,9 +135,7 @@ alias temp='cd /mnt/Multimedia/temp'
 alias sabadd='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py'
 alias sabnew='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py /mnt/Multimedia/temp/new'
 
-set -o vi
 
 alias patches="sudo apt-get update;sudo apt-get -y upgrade"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
-export EDITOR=vim
