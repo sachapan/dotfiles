@@ -9,7 +9,9 @@ export ZSH="/Users/sacha/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+#ZSH_THEME="random"
+#ZSH_THEME="awesomepanda"
+ZSH_THEME="xiong-chiamiov"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,8 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # disable audible irritating beeps
 unsetopt BEEP
 # source aliases from .aliases if available
- [[ -f "$HOME/.aliases" ]] & source "$HOME/.aliases"
-
+#if [[ -f "$HOME/.aliases" ]]; then source "$HOME/.aliases"
+source $HOME/.aliases
 
 
 
