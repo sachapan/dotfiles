@@ -71,7 +71,10 @@ ZSH_THEME="xiong-chiamiov"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,21 +115,22 @@ unsetopt BEEP
 source $HOME/.aliases
 
 # Sacha vi mode stuff
-bindkey -v
-export KEYTIMEOUT=1
-bindkey '^P' up-history
-bindkey '^N' down-history
+# replaced with vi-mode plugin?
+#bindkey -v
+#export KEYTIMEOUT=1
+#bindkey '^P' up-history
+#bindkey '^N' down-history
 
 # backspace and ^h working even after
 # returning from command mode
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
+#bindkey '^?' backward-delete-char
+#bindkey '^h' backward-delete-char
 
 # ctrl-w removed word backwards
-bindkey '^w' backward-kill-word
+#bindkey '^w' backward-kill-word
 
 # ctrl-r starts searching history backward
-bindkey '^r' history-incremental-search-backward
+#bindkey '^r' history-incremental-search-backward
 
 
 
