@@ -9,3 +9,5 @@ alias patches="sudo apt-get update;sudo apt-get -y upgrade"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 alias lrt="ls -ltr"
+alias ta="tmux attach"
+
