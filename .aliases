@@ -1,7 +1,7 @@
 alias pbx='ssh root@incrediblepbx'
 alias ipbx='ssh root@ipbx'
 #alias sabadd='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py /mnt/Multimedia/temp'
-alias temp='cd /mnt/Multimedia/temp'
+alias temp='cd /mnt/Multimedia_deathstar/temp'
 alias sabadd='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py'
 alias sabnew='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py /mnt/Multimedia_deathstar/temp'
 

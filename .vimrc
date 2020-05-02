@@ -18,7 +18,8 @@ set vb noerrorbells
 
 call pathogen#infect()
 
-colo evening
+colo default
+set background=dark
 syntax on
 syntax enable
 filetype plugin on
