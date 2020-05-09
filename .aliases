@@ -11,3 +11,6 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias lrt="ls -ltr"
 alias ta="tmux attach"
 
+alias suvi="sudo vi"
+alias yl="yamllint"
+
