@@ -36,8 +36,26 @@ set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
 set autoindent    " align the new line indent with the previous line
 
+"Function to strip trailing white space
+fun! TrimWhitespace()
+   :echo "TrimWhitespace was called!"
+   let l:save = winsaveview()
+   keeppatterns %s/\s\+$//e
+   call winrestview(l:save)
+endfun
+command! TS call TrimWhitespace()
+
+"Filetypes where I want special sauce on the side.
+"Python
 autocmd BufNewFile,BufRead *.py set ft=python
 autocmd BufWritePost *.py call Flake8()
+"YAML
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable 
+autocmd BufWritePre *.yml normal :call TS
+
+"autocmd BufWritePre *.yml normal %s/\s\+$//e
+"autocmd FileType yaml BufWritePre <buffer> :%/\s\+$//e
 
 "=====[ Comments are important ]==================
 
