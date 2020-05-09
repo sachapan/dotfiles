@@ -9,7 +9,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+#ZSH_THEME="random"
+ZSH_THEME="candy"
 #ZSH_THEME="awesomepanda"
 #ZSH_THEME="xiong-chiamiov"
 
@@ -45,10 +46,10 @@ ZSH_THEME="random"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -74,6 +75,7 @@ ZSH_THEME="random"
 plugins=(
     git
     vi-mode
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -134,6 +136,7 @@ source $HOME/.aliases
 
 # ignore case in autocompletions
 #bind 'set completion-ignore-case on'
-complete -d cd
+#Only autocomplete directories when using cd command
+#complete -d cd
 
 
