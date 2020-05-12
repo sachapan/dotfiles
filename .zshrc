@@ -10,9 +10,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
-ZSH_THEME="candy"
+#ZSH_THEME="candy"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="sporty_256"
+#ZSH_THEME="nebirhos"
 #ZSH_THEME="awesomepanda"
-#ZSH_THEME="xiong-chiamiov"
+ZSH_THEME="xiong-chiamiov"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -119,14 +122,14 @@ source $HOME/.aliases
 # Sacha vi mode stuff
 # replaced with vi-mode plugin?
 #bindkey -v
-#export KEYTIMEOUT=1
+export KEYTIMEOUT=1
 #bindkey '^P' up-history
 #bindkey '^N' down-history
 
 # backspace and ^h working even after
 # returning from command mode
-#bindkey '^?' backward-delete-char
-#bindkey '^h' backward-delete-char
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
 
 # ctrl-w removed word backwards
 #bindkey '^w' backward-kill-word
@@ -137,6 +140,5 @@ source $HOME/.aliases
 # ignore case in autocompletions
 #bind 'set completion-ignore-case on'
 #Only autocomplete directories when using cd command
-#complete -d cd
-
-
+complete -d cd
+#export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
