@@ -51,7 +51,7 @@ autocmd BufNewFile,BufRead *.py set ft=python
 autocmd BufWritePost *.py call Flake8()
 "YAML
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable 
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentkeys-=0# indentkeys-=<:> autoindent  foldmethod=indent nofoldenable
 autocmd BufWritePre *.yml normal :call TS
 
 "autocmd BufWritePre *.yml normal %s/\s\+$//e
