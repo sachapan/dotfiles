@@ -140,5 +140,5 @@ bindkey '^h' backward-delete-char
 # ignore case in autocompletions
 #bind 'set completion-ignore-case on'
 #Only autocomplete directories when using cd command
-complete -d cd
+#complete -d cd
 #export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
