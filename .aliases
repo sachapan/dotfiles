@@ -14,3 +14,7 @@ alias ta="tmux attach"
 alias suvi="sudo vi"
 alias yl="yamllint"
 alias apb="ansible-playbook"
+
+cgrep() {
+  grep -v \# "$1" |grep -v ^$
+}
