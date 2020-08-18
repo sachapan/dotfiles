@@ -15,7 +15,14 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="sporty_256"
 #ZSH_THEME="nebirhos"
 #ZSH_THEME="awesomepanda"
-ZSH_THEME="xiong-chiamiov"
+#ZSH_THEME="xiong-chiamiov"
+
+#ZSH_THEME="xiong-chiamiov-plus"
+# MAybes
+ZSH_THEME="tjkirch"
+
+#ZSH_THEME="rkj-repos"
+#ZSH_THEME="wedisagree"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -52,7 +59,7 @@ ZSH_THEME="xiong-chiamiov"
 #ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -79,6 +86,8 @@ plugins=(
     git
     vi-mode
     zsh-autosuggestions
+    zsh-syntax-highlighting
+#    themes
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -128,8 +137,8 @@ export KEYTIMEOUT=1
 
 # backspace and ^h working even after
 # returning from command mode
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
+#bindkey '^?' backward-delete-char
+#bindkey '^h' backward-delete-char
 
 # ctrl-w removed word backwards
 #bindkey '^w' backward-kill-word
