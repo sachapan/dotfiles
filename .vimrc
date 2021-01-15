@@ -16,14 +16,14 @@ set nomodeline
 set vb noerrorbells
 
 
-call pathogen#infect()
+"execute pathogen#infect()
 
 colo default
 set background=dark
 syntax on
 syntax enable
 filetype plugin on
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set smartindent ft=python cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 filetype plugin indent on
@@ -47,8 +47,8 @@ command! TS call TrimWhitespace()
 
 "Filetypes where I want special sauce on the side.
 "Python
-autocmd BufNewFile,BufRead *.py set ft=python
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufNewFile,BufRead *.py set ft=python
+"autocmd BufWritePost *.py call Flake8()
 "YAML
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentkeys-=0# indentkeys-=<:> autoindent  foldmethod=indent nofoldenable
