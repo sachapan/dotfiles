@@ -13,7 +13,7 @@ alias ta="tmux attach"
 
 alias suvi="sudo vi"
 alias yl="yamllint"
-alias apb="ansible-playbook"
+alias apb="ansible-playbook -i ~/ansible/hosts"
 
 cgrep() {
   grep -v \# "$1" |grep -v ^$
