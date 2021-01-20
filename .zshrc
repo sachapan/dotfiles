@@ -152,4 +152,4 @@ export KEYTIMEOUT=1
 #Only autocomplete directories when using cd command
 #complete -d cd
 #export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
-neofetch
+if [ -x /usr/bin/neofetch ]; then neofetch; fi
