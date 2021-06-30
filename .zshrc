@@ -162,12 +162,12 @@ if [ -x /usr/bin/neofetch ]; then neofetch; fi
 #    [[ -z "$TMUX" ]] && return
 #    [[ -z "$1" ]] && tmux rename-window `hostname -s` || tmux rename-window $1
 #}
-#ssh() {
-#    tmux set-option allow-rename off 1>/dev/null
-#    tmux rename-window "$*"
-#    command ssh "$*"
-#    tmux set-option allow-rename on 1>/dev/null
-#}
+ssh() {
+    tmux set-option allow-rename off 1>/dev/null
+    tmux rename-window "$*"
+    command ssh "$*"
+    tmux set-option allow-rename on 1>/dev/null
+}
 #    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
 #        tmux rename-window "$(echo $* | cut -d @ -f 2)"
 #        command ssh "$@"
