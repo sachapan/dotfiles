@@ -154,3 +154,25 @@ export KEYTIMEOUT=1
 #export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
 # only run neofetch if it is available
 if [ -x /usr/bin/neofetch ]; then neofetch; fi
+# June 28, 2021
+# Changing tmux window name
+#tmux set-option allow-rename off
+
+#set_tmux_window_name() {
+#    [[ -z "$TMUX" ]] && return
+#    [[ -z "$1" ]] && tmux rename-window `hostname -s` || tmux rename-window $1
+#}
+#ssh() {
+#    tmux set-option allow-rename off 1>/dev/null
+#    tmux rename-window "$*"
+#    command ssh "$*"
+#    tmux set-option allow-rename on 1>/dev/null
+#}
+#    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
+#        tmux rename-window "$(echo $* | cut -d @ -f 2)"
+#        command ssh "$@"
+#        tmux set-window-option automatic-rename "on" 1>/dev/null
+#    else
+#        command ssh "$@"
+#    fi
+#}
