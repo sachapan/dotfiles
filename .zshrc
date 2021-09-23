@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -152,6 +152,30 @@ export KEYTIMEOUT=1
 #Only autocomplete directories when using cd command
 #complete -d cd
 #export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
-# only run neofetch if it available
-if [ -x /usr/bin/neofetch ]; then neofetch
-fi
+# only run neofetch if it is available
+if [ -x /usr/bin/neofetch ]; then neofetch; fi
+# June 28, 2021
+# Changing tmux window name
+#tmux set-option allow-rename off
+
+#set_tmux_window_name() {
+#    [[ -z "$TMUX" ]] && return
+#    [[ -z "$1" ]] && tmux rename-window `hostname -s` || tmux rename-window $1
+#}
+#Sept 13, 2021
+#commenting out since passing command line into an ssh command isn't working with
+#this configuration
+#ssh() {
+#    tmux set-option allow-rename off 1>/dev/null
+#    tmux rename-window "$*"
+#    command ssh "$*"
+#    tmux set-option allow-rename on 1>/dev/null
+#}
+#    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
+#        tmux rename-window "$(echo $* | cut -d @ -f 2)"
+#        command ssh "$@"
+#        tmux set-window-option automatic-rename "on" 1>/dev/null
+#    else
+#        command ssh "$@"
+#    fi
+#}
