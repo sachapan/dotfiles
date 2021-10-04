@@ -1,0 +1,9 @@
+[user]
+	name = Sacha Panasuik
+	email = sachapan@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[init]
+	defaultBranch = main
