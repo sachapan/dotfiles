@@ -1,11 +1,5 @@
-BellType=0
-Transparency=off
 Font=DejaVu Sans Mono for Powerline
-FontHeight=12
-FontWeight=700
-ThemeFile=xterm
-BackgroundColour=77,72,77
-CursorColour=255,128,0
-Columns=124
-Rows=53
-FontIsBold=yes
+FontHeight=9
+ThemeFile=dracula
+FontSmoothing=full
+BellType=0
