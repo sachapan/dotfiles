@@ -17,6 +17,7 @@ set backspace=2
 set history=5000
 set ruler
 set number
+set relativenumber
 set showcmd
 set incsearch
 set laststatus=2
