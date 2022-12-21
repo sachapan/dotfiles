@@ -29,7 +29,8 @@ set vb noerrorbells
 
 "execute pathogen#infect()
 
-colo default
+"colo default
+colo desert
 set background=dark
 syntax on
 syntax enable
@@ -70,6 +71,6 @@ autocmd BufWritePre *.yml normal :call TS
 
 "=====[ Comments are important ]==================
 
-highlight Comment term=bold cterm=italic ctermfg=white gui=italic guifg=white
+highlight Comment term=bold cterm=italic ctermfg=green gui=italic guifg=green
 
 
