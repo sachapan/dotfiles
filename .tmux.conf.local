@@ -437,8 +437,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 #bind k select-pane -U
 #bind l select-pane -R
 #set-window-option -g automatic-rename on
-#set-option -g set-titles on
-#set-option -g automatic-rename-format '#(basename "#{host_short}")'
+set-option -g set-titles on
+set-option -g automatic-rename-format '#(basename "#{host_short}")'
 #set-window-option -g aggressive-resize
 #setw -g aggressive-resize on
 #set -g base-index 1
