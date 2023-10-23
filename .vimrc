@@ -27,7 +27,7 @@ set nomodeline
 set vb noerrorbells
 
 
-"execute pathogen#infect()
+execute pathogen#infect()
 
 "colo default
 colo desert
