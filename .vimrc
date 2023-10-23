@@ -1,10 +1,8 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"                                                                              "
 "                       __   _ _ _ __ ___  _ __ ___                            "
 "                       \ \ / / | '_ ` _ \| '__/ __|                           "
 "                        \ V /| | | | | | | | | (__                            "
 "                         \_/ |_|_| |_| |_|_|  \___|                           "
-"                                                                              "
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
@@ -26,11 +24,17 @@ set modelines=0
 set nomodeline
 set vb noerrorbells
 
+call plug#begin()
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 
-execute pathogen#infect()
+call plug#end()
+
+"execute pathogen#infect()
 
 "colo default
-colo desert
+" colo desert
 set background=dark
 syntax on
 syntax enable
