@@ -429,14 +429,14 @@ tmux_conf_uninstall_plugins_on_reload=true
 #
 # "$@"
 # # /!\ do not remove the previous line
-#set -g prefix C-a
-#set-window-option -g mode-keys vi
-#set -g status-keys vi
-#bind h select-pane -L
-#bind j select-pane -D
-#bind k select-pane -U
-#bind l select-pane -R
-#set-window-option -g automatic-rename on
+set -g prefix C-a
+set-window-option -g mode-keys vi
+set -g status-keys vi
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+set-window-option -g automatic-rename on
 set-option -g set-titles on
 set-option -g automatic-rename-format '#(basename "#{host_short}")'
 #set-window-option -g aggressive-resize
@@ -455,8 +455,8 @@ set-option -g automatic-rename-format '#(basename "#{host_short}")'
 #set-window-option -g clock-mode-colour colour64 #green
 #set-window-option -g window-status-bell-style fg=colour235,bg=colour160 #base02, red
 #set mouse off
-#new -n hawk
-#neww -n hawk
-#neww -n razor "ssh razor"
-#neww -n razor "ssh razor"
+new -n hawk
+neww -n hawk
+neww -n razor "ssh razor"
+neww -n bravo "ssh bravo"
 selectw -t 1
