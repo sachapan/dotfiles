@@ -29,7 +29,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'bling/vim-bufferline'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'SirVer/ultisnips'
