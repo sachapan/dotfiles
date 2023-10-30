@@ -28,7 +28,15 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
-
+Plug 'bling/vim-bufferline'
+Plug 'neoclide/coc.nvim'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ap/vim-css-color'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 "execute pathogen#infect()
