@@ -35,14 +35,11 @@ Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'ap/vim-css-color'
 " Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
-<<<<<<< HEAD
 " Plug 'jiangmiao/auto-pairs'
-=======
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'
 Plug 'mbbill/undotree'
->>>>>>> 759bbae (Set mouse to auto in .vimrc)
 call plug#end()
 
 " Plug 'ap/vim-css-color'
