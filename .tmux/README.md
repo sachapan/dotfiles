@@ -18,6 +18,18 @@ Requirements:
 To install, run the following from your terminal: (you may want to backup your
 existing `~/.tmux.conf` first)
 
+  - tmux **`>= 2.4`** running inside Linux, Mac, OpenBSD, Cygwin or WSL
+  - awk, perl and sed
+  - outside of tmux, `$TERM` must be set to `xterm-256color`
+
+⚠️ Before installing, you may want to backup your existing configuration.
+
+You can install Oh my tmux! at any of the following locations:
+- `~`
+- `$XDG_CONFIG_HOME/tmux`
+- `~/.config/tmux`
+
+Installing in `~`:
 ```
 $ cd
 $ git clone https://github.com/gpakosz/.tmux.git
@@ -38,15 +50,48 @@ $ cp /path/to/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 Then proceed to [customize] your `~/.tmux.conf.local` copy.
 
 [customize]: #configuration
+Installing in `$XDG_CONFIG_HOME/tmux`:
+```
+$ git clone https://github.com/gpakosz/.tmux.git "/path/to/oh-my-tmux"
+$ mkdir -p "$XDG_CONFIG_HOME/tmux"
+$ ln -s "/path/to/oh-my-tmux/.tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+$ cp "/path/to/oh-my-tmux/.tmux.conf.local" "$XDG_CONFIG_HOME/tmux/tmux.conf.local"
+```
+
+Installing in `~/.config/tmux`:
+```
+$ git clone https://github.com/gpakosz/.tmux.git "/path/to/oh-my-tmux"
+$ mkdir -p "~/.config/tmux"
+$ ln -s "/path/to/oh-my-tmux/.tmux.conf" "~/.config/tmux/tmux.conf"
+$ cp "/path/to/oh-my-tmux/.tmux.conf.local" "~/.config/tmux/tmux.conf.local"
+```
+⚠️ When installing `$XDG_CONFIG_HOME/tmux` or `~/.config/tmux`, the configuration
+file names don't have a leading `.` character.
+
+❗️ You should never alter the main `.tmux.conf` or `tmux.conf` file. If you do,
+you're on your own. Instead, every customization should happen in your
+`.tmux.conf.local` or `tmux.conf.local` customization file copy.
+>>>>>>> Stashed changes
 
 If you're a Vim user, setting the `$EDITOR` environment variable to `vim` will
 enable and further customize the vi-style key bindings (see tmux manual).
 
+<<<<<<< Updated upstream
 If you're new to tmux, I recommend you read [tmux 2: Productive Mouse-Free
 Development][bhtmux2] by [@bphogan].
 
 [bhtmux2]: https://pragprog.com/book/bhtmux2/tmux-2
 [@bphogan]: https://twitter.com/bphogan
+=======
+If you're new to tmux, I recommend you to read [tmux 2: Productive Mouse-Free
+Development][bhtmux2] by [@bphogan].
+
+Now proceed to [adjust] your `.local` customization file copy.
+
+[bhtmux2]: https://pragprog.com/titles/bhtmux2/tmux-2
+[@bphogan]: https://twitter.com/bphogan
+[adjust]: #configuration
+>>>>>>> Stashed changes
 
 Troubleshooting
 ---------------
@@ -70,15 +115,22 @@ Troubleshooting
    This can also happen on macOS when using iTerm2 and "Use Unicode version 9
    character widths" is enabled in `Preferences... > Profiles > Text`
 
+<<<<<<< Updated upstream
    For that reason, the default `~/.tmux.conf.local` file stopped using Unicode
    characters for which width changed in between Unicode 8.0 and 9.0 standards,
    as well as Emojis.
+=======
+   For that reason, the default sample `.local` customization file stopped using
+   Unicode characters for which width changed in between Unicode 8.0 and 9.0
+   standards, as well as Emojis.
+>>>>>>> Stashed changes
 
  - **I installed Powerline and/or (patched) fonts but can't see Powerline
    symbols.**
 
    First, you don't need to install Powerline. You only need fonts patched with
    Powerline symbols or the standalone `PowerlineSymbols.otf` font. Then make
+<<<<<<< Updated upstream
    sure your `~/.tmux.conf.local` copy uses the right code points for
    `tmux_conf_theme_left_separator_XXX` values.
 
@@ -87,6 +139,15 @@ Troubleshooting
    There is currently a [bug][1681] in the new console powering Bash On Windows
    preventing text attributes (bold, underscore, ...) to combine properly with
    colors. The workaround is to search your `~/.tmux.conf.local` copy and
+   sure your `.local` customization file copy uses the Powerline code points for
+   `tmux_conf_theme_left_separator_XXX` values.
+
+ - **I'm using Bash On Windows (WSL), colors and the Powerline look are broken.**
+
+   There is currently a [bug][1681] in the new console powering Bash On Windows
+   preventing text attributes (bold, underscore, ...) to combine properly with
+   colors. The workaround is to search your `.local` customization file copy and
+>>>>>>> Stashed changes
    replace attributes with `'none'`.
 
    Also, until Window's console replaces its GDI based render with a DirectWrite
@@ -151,8 +212,13 @@ list of key bindings:
 
 This configuration uses the following bindings:
 
+<<<<<<< Updated upstream
  - `<prefix> e` opens `~/.tmux.conf.local` with the editor defined by the
    `$EDITOR` environment variable (defaults to `vim` when empty)
+=======
+ - `<prefix> e` opens the `.local` customization file copy with the editor
+   defined by the `$EDITOR` environment variable (defaults to `vim` when empty)
+>>>>>>> Stashed changes
  - `<prefix> r` reloads the configuration
  - `C-l` clears both the screen and the tmux history
 
@@ -198,6 +264,7 @@ Configuration
 -------------
 
 While this configuration tries to bring sane default settings, you may want to
+<<<<<<< Updated upstream
 customize it further to your needs. Instead of altering the `~/.tmux.conf` file
 and diverging from upstream, the proper way is to edit the `~/.tmux.conf.local`
 file.
@@ -206,6 +273,18 @@ Please refer to the sample `.tmux.conf.local` file to know more about variables
 you can adjust to alter different behaviors. Pressing `<prefix> e` will open
 `~/.tmux.conf.local` with the editor defined by the `$EDITOR` environment
 variable (defaults to `vim` when empty).
+=======
+customize it further to your needs.
+
+❗️ Again, you should never alter the main `.tmux.conf` or `tmux.conf` file.
+If you do, you're on your own.
+
+Please refer to the sample `.local` customization file to know more about the
+variables that allow you to alter different behaviors. Upon successful
+installation, pressing `<prefix> e` will open your `.local` customization file
+copy with the editor defined by the `$EDITOR` environment variable (defaults to
+`vim` when empty).
+>>>>>>> Stashed changes
 
 ### Enabling the Powerline look
 
@@ -227,12 +306,18 @@ To make use of these symbols, there are several options:
 [powerline patched fonts]: https://github.com/powerline/fonts
 [powerline font]: https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 [terminal support]: http://powerline.readthedocs.io/en/master/usage.html#usage-terminal-emulators
+<<<<<<< Updated upstream
 [Powerline manual]: http://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
 
 Please see the [Powerline manual] for further details.
 
 Then edit your `~/.tmux.conf.local` copy (with `<prefix> e`) and adjust the
 following variables:
+=======
+
+Then edit your `.local` customization file copy (with `<prefix> e`) and adjust
+the following variables:
+>>>>>>> Stashed changes
 
 ```
 tmux_conf_theme_left_separator_main='\uE0B0'
@@ -240,12 +325,25 @@ tmux_conf_theme_left_separator_sub='\uE0B1'
 tmux_conf_theme_right_separator_main='\uE0B2'
 tmux_conf_theme_right_separator_sub='\uE0B3'
 ```
+<<<<<<< Updated upstream
 ### Configuring the status line
 
 Contrary to the first iterations of this configuration, by now you have total
 control on the content and order of `status-left` and `status-right`.
 
 Edit your `~/.tmux.conf.local` copy (`<prefix> e`) and adjust the
+=======
+
+The [Powerline manual] contains further details on how to install fonts
+containing the Powerline symbols. You don't need to install Powerline itself
+though.
+
+[Powerline manual]: http://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
+
+### Configuring the status line
+
+Edit your `.local` customization file copy (`<prefix> e`) and adjust the
+>>>>>>> Stashed changes
 `tmux_conf_theme_status_left` and `tmux_conf_theme_status_right` variables to
 your own preferences.
 
@@ -273,7 +371,11 @@ This configuration supports the following builtin variables:
  - `#{username_ssh}`: SSH aware username information, blank when not connected
    to a remote server through SSH/Mosh
 
+<<<<<<< Updated upstream
 Beside custom variables mentioned above, the `tmux_conf_theme_status_left` and
+=======
+Beside the variables mentioned above, the `tmux_conf_theme_status_left` and
+>>>>>>> Stashed changes
 `tmux_conf_theme_status_right` variables support usual tmux syntax, e.g. using
 `#()` to call an external command that inserts weather information provided by
 [wttr.in]:
@@ -287,8 +389,13 @@ minutes whatever the value of `status-interval`.
 
 [wttr.in]: https://github.com/chubin/wttr.in#one-line-output
 
+<<<<<<< Updated upstream
 💡 You can also define your own custom variables. See the sample
 `.tmux.conf.local` file for instructions.
+=======
+💡 You can also define your own custom variables by writing special functions,
+see the sample `.local` customization file for instructions.
+>>>>>>> Stashed changes
 
 Finally, remember `tmux_conf_theme_status_left` and
 `tmux_conf_theme_status_right` end up being given to tmux as `status-left` and
@@ -297,7 +404,11 @@ character has a special meaning and needs to be escaped by doubling it, e.g.
 ```
 tmux_conf_theme_status_right='#(echo foo %% bar)'
 ```
+<<<<<<< Updated upstream
 See `man 3 strftime`.
+=======
+See also `man 3 strftime`.
+>>>>>>> Stashed changes
 
 ### Using TPM plugins
 
@@ -306,17 +417,26 @@ This configuration now comes with built-in [TPM] support:
 - whenever a plugin introduces a variable to be used in `status-left` or
   `status-right`, you can use it in `tmux_conf_theme_status_left` and
   `tmux_conf_theme_status_right` variables, see instructions above 👆
+<<<<<<< Updated upstream
 - ⚠️ do not add `set -g @plugin 'tmux-plugins/tpm'`
 - ⚠️ do not add `run '~/.tmux/plugins/tpm/tpm'` to `~/.tmux.conf` or your
 - `~/.tmux.conf.local` copy ← people who are used to alter
   `.tmux.conf` to add TPM support will have to adapt their configuration
+=======
+- ⚠️ do not add `set -g @plugin 'tmux-plugins/tpm'` to any configuration file
+- ⛔️ do not add `run '~/.tmux/plugins/tpm/tpm'` to any configuration file
+>>>>>>> Stashed changes
 
 ⚠️ The TPM bindings differ slightly from upstream:
   - installing plugins: `<prefix> + I`
   - uninstalling plugins: `<prefix> + Alt + u`
   - updating plugins: `<prefix> + u`
 
+<<<<<<< Updated upstream
 See `~/.tmux.conf.local` for instructions.
+=======
+See the sample `.local` customization file for instructions.
+>>>>>>> Stashed changes
 
 [TPM]: https://github.com/tmux-plugins/tpm
 
