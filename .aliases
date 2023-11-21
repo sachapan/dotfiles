@@ -14,7 +14,7 @@ alias al="ansible-lint"
 alias suvi="sudo vi"
 alias yl="yamllint"
 alias apb="ansible-playbook -i ~/ansible/hosts"
-
+alias vi="vim"
 cgrep() {
   grep -v \# "$1" |grep -v ^$
 }
