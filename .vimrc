@@ -26,7 +26,7 @@ set nomodeline
 set vb noerrorbells
 
 call plug#begin()
-" Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
  Plug 'vim-airline/vim-airline'
 " Plug 'tpope/vim-unimpaired'
  Plug 'preservim/nerdtree'
