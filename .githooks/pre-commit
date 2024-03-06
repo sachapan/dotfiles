@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+#
+# Pull before committing
+# Credential handling options:
+#  - hardcode credentials in URL
+#  - use ssh with key auth
+#  - https://git-scm.com/docs/git-credential-store
+#  - git credential helper on windows
+
+# Redirect output to stderr, uncomment for more output for debugging
+# exec 1>&2
+
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+output=$(dotfiles pull --no-rebase)
+
+# Handle non error output 
+if [ "$output" = "Already up to date." ]; then
+    # no output
+    :
+else
+    # probably error print it to screen
+    echo "${output}"
+fi
+
+#dotfiles add -A
