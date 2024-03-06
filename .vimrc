@@ -27,19 +27,16 @@ set vb noerrorbells
 
 call plug#begin()
 Plug 'tpope/vim-commentary'
- Plug 'vim-airline/vim-airline'
-" Plug 'tpope/vim-unimpaired'
- Plug 'preservim/nerdtree'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
- Plug 'rafi/awesome-vim-colorschemes'
+Plug 'vim-airline/vim-airline'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'ap/vim-css-color'
 " Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
+Plug 'preservim/nerdtree'
 " Plug 'jiangmiao/auto-pairs'
- Plug 'preservim/nerdtree'
- Plug 'jiangmiao/auto-pairs'
- Plug 'tpope/vim-unimpaired'
- Plug 'mbbill/undotree'
+Plug 'tpope/vim-unimpaired'
+Plug 'mbbill/undotree'
 call plug#end()
 
 " Plug 'ap/vim-css-color'
