@@ -5,6 +5,7 @@
 #alias sabadd='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py'
 #alias sabnew='/share/xbmc/scratch/sabnzbd/scripts/sabToSickBeard.py /mnt/Multimedia_deathstar/temp'
 
+alias bat="batcat"
 alias patches="sudo apt-get update;sudo apt-get -y upgrade"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
@@ -18,3 +19,5 @@ alias vi="vim"
 cgrep() {
   grep -v \# "$1" |grep -v ^$
 }
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
