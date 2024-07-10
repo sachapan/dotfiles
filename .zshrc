@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/gems/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export alerts="https://ntfy.sh/sachapan_alerts"
+export GEM_HOME="$HOME/gems"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
