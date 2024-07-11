@@ -8,7 +8,7 @@
 alias bat="batcat"
 alias patches="sudo apt-get update;sudo apt-get -y upgrade"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-
+alias pull_docker='cd ~/ansible;ansible docker_hosts -m shell -a "cd docker; git fetch && git pull" -o;cd -'
 alias lrt="ls -ltr"
 alias ta="tmux attach || tmux new"
 alias al="ansible-lint"
