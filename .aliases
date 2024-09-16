@@ -21,3 +21,5 @@ cgrep() {
 }
 alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output --clipboard'
+alias promreload='curl -X POST https://prom.databytes.me/-/reload'
+alias promcheck="promtool check config /opt/prometheus/etc/prometheus.yml"
