@@ -5,7 +5,7 @@
 "                         \_/ |_|_| |_| |_|_|  \___|                           "
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-
+let mapleader = "," " map leader to comma
 set encoding=UTF-8
 set nocompatible
 set nocp
