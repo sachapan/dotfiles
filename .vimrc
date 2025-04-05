@@ -25,6 +25,9 @@ set modelines=0
 set nomodeline
 set vb noerrorbells
 
+map <leader>t :NERDTreeToggle<CR>
+" Automatically close NERDTree when you open a file
+let NERDTreeQuitOnOpen=1
 call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
@@ -272,3 +275,28 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+"function! ToggleRelativeNumber()
+"    if &relativenumber
+"         set norelativenumber
+"    else
+"         set relativenumber
+"    endif
+"endfunction
+"nnoremap <C-n> :call ToggleRelativeNumber()<CR>
+"Relative with start point or with line number or absolute number lines
+function! NumberToggle()
+    if(&number == 1)
+        set number!
+        set relativenumber!
+      elseif(&relativenumber==1)
+        set relativenumber
+        set number
+      else
+        set norelativenumber
+        set number
+    endif
+endfunction
+
+nnoremap <C-n> :call NumberToggle()<CR>
+
