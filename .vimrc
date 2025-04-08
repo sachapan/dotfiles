@@ -28,6 +28,8 @@ set vb noerrorbells
 map <leader>t :NERDTreeToggle<CR>
 " Automatically close NERDTree when you open a file
 let NERDTreeQuitOnOpen=1
+
+" Plugins
 call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
@@ -81,7 +83,7 @@ command! TS call TrimWhitespace()
 "autocmd BufNewFile,BufRead *.py set ft=python
 "autocmd BufWritePost *.py call Flake8()
 "YAML
-" au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml 
+" au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
 " autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentkeys-=0# indentkeys-=<:> autoindent  foldmethod=indent nofoldenable
 " autocmd BufWritePre *.yml normal :call TS
 
