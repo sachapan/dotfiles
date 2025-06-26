@@ -191,3 +191,13 @@ knownrm() {
    sed -i "$1d" ~/.ssh/known_hosts
  fi
 }
+# Make and cd to new dir
+mcd () {
+ if [ -z "$1" ]; then
+        echo "Make and change to new dir"
+        return 1
+ else
+        mkdir -p "$1"
+        cd "$1" || return
+ fi
+}
