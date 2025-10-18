@@ -301,4 +301,5 @@ function! NumberToggle()
 endfunction
 
 nnoremap <C-n> :call NumberToggle()<CR>
-
+" Comment toggle like vscode
+noremap <leader>/ :Commentary<cr>
