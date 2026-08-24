@@ -157,8 +157,9 @@ export KEYTIMEOUT=1
 #complete -d cd
 #export RPROMPT="%{$fg[green]%}[INSERT]%{$reset_color%}"
 # only run neofetch if it is available
-if [ -x /usr/bin/neofetch ]; then neofetch; fi
-if [ -x /usr/bin/neowofetch ]; then neowofetch; fi
+# Disable neofetch from login
+#if [ -x /usr/bin/neofetch ]; then neofetch; fi
+#if [ -x /usr/bin/neowofetch ]; then neowofetch; fi
 # June 28, 2021
 # Changing tmux window name
 #tmux set-option allow-rename off
